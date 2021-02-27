@@ -1,0 +1,8 @@
+node_modules
+.vscode
+yarn.lock
+
+jspm_packages
+
+.serverless
+demo.js
