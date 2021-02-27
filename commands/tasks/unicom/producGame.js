@@ -400,9 +400,9 @@ var producGame = {
           .indexOf(g.id) !== -1
     );
     console.log("剩余未完成game", games.length);
-    let queue = new PQueue({ concurrency: 30 });
+    let queue = new PQueue({ concurrency: 2 });
 
-    console.log("调度任务中", "并发数", 30);
+    console.log("调度任务中", "并发数", 2);
     for (let game of games) {
       queue.add(async () => {
         console.log(game.name);
@@ -449,9 +449,9 @@ var producGame = {
         d.task === "5" && d.reachState === "0" && d.task_type === "duration"
     );
     console.log("剩余未完成game", games.length);
-    let queue = new PQueue({ concurrency: 3 });
+    let queue = new PQueue({ concurrency: 2 });
 
-    console.log("调度任务中", "并发数", 3);
+    console.log("调度任务中", "并发数", 2);
     for (let game of games) {
       queue.add(async () => {
         console.log(game.name);
